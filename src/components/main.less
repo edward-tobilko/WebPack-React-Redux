@@ -1,0 +1,81 @@
+// переменные для less
+@width: 80px;
+@height: 80px;
+
+// loader
+.loader {
+    width: @width;
+    height: @height; 
+    border: 2px dashed teal; 
+    border-radius: 50%; 
+    margin: 30vh auto;
+
+    animation-name:
+    loader-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate; 
+    animation-timing-function:linear;
+}
+
+// анимируем loader
+@keyframes loader-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1.2);
+    }
+}
+
+// search form
+.search__form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.search__input {
+    width: 600px;
+    height: 35px;
+    padding: 10px;
+    &:focus {
+        border-color: teal;
+    }
+}
+.search__btn {
+    height: 35px;
+    margin-left: 10px;
+    width: 90px;
+    background: inherit;
+    cursor: pointer;
+    border-color: teal;
+    color: teal;
+    &:hover {
+        background: teal;
+        color: white;
+        transition: .4s ease-in-out;
+    }
+}
+
+// paginatin
+.pagination {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 40px 0;
+    align-items: center;
+}
+.pagination__item, .active__page {
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 30%;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.pagination__item:hover {
+    border-color: teal;
+}
+.active__page {
+    border: 2px solid teal;
+    font-weight: 700;
+}
