@@ -2,7 +2,7 @@
 
 #
 
-### npm start - to start a project.
+#### npm start - to start a project
 
 Open http://localhost:3000 to view it in the browser.
 
